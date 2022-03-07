@@ -13,11 +13,11 @@ const frutas = [
         cor: "amarelo",
         arvore: "bananeira",
         bom_pra_caimbra: true,
-        bom_coração: true,
+        bom_coracao: true,
         numero_fruta: 1,
         tipos: {
-            type1: "nanica",
-            type2: "ouro"
+            tipo1: "nanica",
+            tipo2: "ouro"
         }
     },
     {
@@ -25,11 +25,11 @@ const frutas = [
         cor: "vermelho",
         arvore: "macieira",
         bom_pra_caimbra: false,
-        bom_coração: true,
+        bom_coracao: true,
         numero_fruta: 2,
         tipos: {
-            type1: "gala", 
-            type2: "fuji"
+            tipo1: "gala", 
+            tipo2: "fuji"
         }
     },
     {
@@ -37,11 +37,11 @@ const frutas = [
         cor: "verde",
         arvore: "pereira",
         bom_pra_caimbra: false,
-        bom_coração: false,
+        bom_coracao: false,
         numero_fruta: 3,
         tipos: {
-            type1: "portuguesa",
-            type2: "comice" 
+            tipo1: "portuguesa",
+            tipo2: "comice" 
         }
     },
 ]
