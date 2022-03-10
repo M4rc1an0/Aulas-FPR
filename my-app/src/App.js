@@ -11,35 +11,40 @@ function App() {
     {
       nome: "Roberto",
       idade: 20,
-      data_nasc: "08/07/2002",
-      nome_mae: "Alexia",
+      dataNasc: "08/07/2002",
+      tel: "(11)99875-6271",
+      nomeMae: "Alexia",
     },
     {
       nome: "Alice",
       idade: 32,
-      data_nasc: "01/02/1990",
-      nome_mae: "Amanda",
-      nome_pai: "Matheus",
+      dataNasc: "01/02/1990",
+      tel: "(32)95482-3023",
+      nomeMae: "Amanda",
+      nomePai: "Matheus",
     },
     {
       nome: "Renata",
       idade: 22,
-      data_nasc: "23/05/1999",
-      nome_mae: "Bianca",
-      nome_pai: "João",
+      dataNasc: "23/05/1999",
+      tel: "(23)99735-1099",
+      nomeMae: "Bianca",
+      nomePai: "João",
     },
     {
       nome: "Rafael",
       idade: 25,
-      data_nasc: "23/05/1997",
-      nome_mae: "Natalia",
-      nome_pai: "Guilherme",
+      dataNasc: "23/05/1997",
+      tel: "(03)96489-0623",
+      nomeMae: "Natalia",
+      nomePai: "Guilherme",
     },
     {
       nome: "Camila",
       idade: 12,
-      data_nasc: "17/02/2010",
-      nome_mae: "Cleiton",
+      dataNasc: "17/02/2010",
+      tel: "(11)99817-3304",
+      nomeMae: "Ana",
     }
   ]
 
@@ -55,11 +60,12 @@ function App() {
                   <div>
                     <li className='pessoa'><p>Nome:</p> {item.nome}</li>
                     <li className='pessoa'><p>Idade:</p> {item.idade}</li>
-                    <li className='pessoa'><p>Data Nasc.:</p> {item.data_nasc}</li>
-                    <li className='pessoa'><p>Nome Mãe:</p> {item.nome_mae}</li>
-                    {item.nome_pai && <li className='pessoa'><p>Nome Pai:</p> {item.nome_pai}</li>}
+                    <li className='pessoa'><p>Data Nasc.:</p> {item.dataNasc}</li>
+                    <li className='pessoa'><p>Tel.:</p> {item.tel}</li>
+                    <li className='pessoa'><p>Nome Mãe:</p> {item.nomeMae}</li>
+                    {item.nomePai && <li className='pessoa'><p>Nome Pai:</p> {item.nomePai}</li>}
                   </div>
-                  {item.nome_pai ?
+                  {item.nomePai ?
                     <li className='titulo-pai'>TITULO DE PAI</li>
                     :
                     <li className='cade-pai'> :( </li>
