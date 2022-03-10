@@ -2075,10 +2075,10 @@ module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CColaborador%20-%20DATUM%5CDesktop%5CEstudos%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CColaborador%20-%20DATUM%5CDesktop%5CEstudos%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cmarci%5CDocuments%5CAulas-FPR%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cmarci%5CDocuments%5CAulas-FPR%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4759,7 +4759,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-ga */ "./node_modules/react-ga/dist/esm/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Colaborador - DATUM\\Desktop\\Estudos\\Aulas-FPR\\pages\\index.jsx";
+var _jsxFileName = "C:\\Users\\marci\\Documents\\Aulas-FPR\\Aulas-FPR\\pages\\index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -5454,14 +5454,14 @@ function Page() {
 
 /***/ }),
 
-/***/ 2:
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CColaborador%20-%20DATUM%5CDesktop%5CEstudos%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
-  \*********************************************************************************************************************************************************************************/
+/***/ 1:
+/*!*******************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cmarci%5CDocuments%5CAulas-FPR%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CColaborador%20-%20DATUM%5CDesktop%5CEstudos%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CColaborador%20-%20DATUM%5CDesktop%5CEstudos%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cmarci%5CDocuments%5CAulas-FPR%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cmarci%5CDocuments%5CAulas-FPR%5CAulas-FPR%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./");
 
 
 /***/ }),
@@ -5477,5 +5477,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
