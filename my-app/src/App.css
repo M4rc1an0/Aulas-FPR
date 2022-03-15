@@ -1,5 +1,81 @@
+body {
+  padding: 0;
+  margin: 0;
+
+}
 .container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 25px;
+}
+
+.box {
+  width: 40%;
+  margin: 20px;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  border-top: 5px solid rgb(201, 201, 201);
+  border-bottom: 5px solid rgb(201, 201, 201);
+  border-left: 5px solid rgb(99, 99, 99);
+  border-right: 5px solid rgb(99, 99, 99);
+  background-color: rgb(243, 243, 243);
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  border-top: 5px solid rgb(201, 201, 201);
+  border-bottom: 5px solid rgb(201, 201, 201);
+  border-left: 5px solid rgb(99, 99, 99);
+  border-right: 5px solid rgb(99, 99, 99);
+  background-color: rgb(185, 185, 185);
+}
+
+.person {
+  margin: 10px 5px;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.exer1 {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-top: 5px solid rgb(201, 201, 201);
+  border-left: 5px solid rgb(99, 99, 99);
+  border-radius: 20px;
+  background-color: rgb(185, 185, 185);
+}
+
+.exer1 p {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.column h2 {
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+.separation{
+  display: flex;
+  justify-content: center;
 }

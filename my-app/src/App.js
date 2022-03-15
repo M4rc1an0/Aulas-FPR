@@ -22,7 +22,7 @@ function App() {
       maiorIdade: true
     },
     {
-      nome: "Renata",
+      nome: "Vinicius",
       idade: 22,
       dataNasc: "23/05/1999",
       maiorIdade: true
@@ -63,26 +63,38 @@ function App() {
 
 
   return (
-    <div className="App">
-      {
-        filtrar.map(pessoa => {
-          return (
-            <p>{pessoa.nome}</p>
-          )
-        })
-      }
+    <div className="container">
+      <div className="box">
+        <h1 className='title'>Pessoas menores de 18 anos</h1>
+        <div className="separation">
+          {
+            filtrar.map(pessoa => {
+              return (
+                <div className='exer1'>
+                  <div className='column'><h2>Nome:</h2><p>{pessoa.nome}</p></div>
+                  <div className='column'><h2>Idade:</h2><p>{pessoa.idade}</p></div>
+                  <div className='column'><h2>Data N.:</h2><p>{pessoa.dataNasc}</p></div>
+                </div>
 
-      {
-        gostoAbacaxi.map(fruta => {
-          return (
-            <>
-              <p>{fruta.nome}</p>
-              <p>{fruta.frutaPreferida}</p>
-            </>
-          )
-        })
-      }
-
+              )
+            })
+          }
+        </div>
+        <h1 className='title'>Pessoas que gostam de Abacaxi</h1>
+        <div className="separation">
+          {
+            gostoAbacaxi.map(pessoa => {
+              return (
+                <div className='exer1'>
+                  <div className='column'><h2>Nome:</h2><p>{pessoa.nome}</p></div>
+                  <div className='column'><h2>Sexo:</h2><p>{pessoa.sexo}</p></div>
+                  <div className='column'><h2>Fruta:</h2><p>{pessoa.frutaPreferida}</p></div>
+                </div>
+              )
+            })
+          }
+        </div>
+      </div>
     </div>
   );
 }
