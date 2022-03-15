@@ -65,15 +65,15 @@ function App() {
   return (
     <div className="container">
       <div className="box">
-        <h1 className='title'>Pessoas menores de 18 anos</h1>
+        <h1 className="title">Pessoas menores de 18 anos</h1>
         <div className="separation">
           {
             filtrar.map(pessoa => {
               return (
-                <div className='exer1'>
-                  <div className='column'><h2>Nome:</h2><p>{pessoa.nome}</p></div>
-                  <div className='column'><h2>Idade:</h2><p>{pessoa.idade}</p></div>
-                  <div className='column'><h2>Data N.:</h2><p>{pessoa.dataNasc}</p></div>
+                <div className="exer1">
+                  <div className="column"><h2>Nome:</h2><p>{pessoa.nome}</p></div>
+                  <div className="column"><h2>Idade:</h2><p>{pessoa.idade}</p></div>
+                  <div className="column"><h2>Data N.:</h2><p>{pessoa.dataNasc}</p></div>
                 </div>
 
               )
