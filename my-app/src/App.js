@@ -80,15 +80,15 @@ function App() {
             })
           }
         </div>
-        <h1 className='title'>Pessoas que gostam de Abacaxi</h1>
+        <h1 className="title">Pessoas que gostam de Abacaxi</h1>
         <div className="separation">
           {
             gostoAbacaxi.map(pessoa => {
               return (
-                <div className='exer1'>
-                  <div className='column'><h2>Nome:</h2><p>{pessoa.nome}</p></div>
-                  <div className='column'><h2>Sexo:</h2><p>{pessoa.sexo}</p></div>
-                  <div className='column'><h2>Fruta:</h2><p>{pessoa.frutaPreferida}</p></div>
+                <div className="exer1">
+                  <div className="column"><h2>Nome:</h2><p>{pessoa.nome}</p></div>
+                  <div className="column"><h2>Sexo:</h2><p>{pessoa.sexo}</p></div>
+                  <div className="column"><h2>Fruta:</h2><p>{pessoa.frutaPreferida}</p></div>
                 </div>
               )
             })
