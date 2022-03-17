@@ -2,80 +2,130 @@ import './App.css';
 
 function App() {
 
-  //MAP SEMPRE É USADO PARA TRAZER DADOS DE UM ARRAY []
+  // jogo1 - Uma lista(array) com 4 games, todos os games tem 4 itens,
+  // 2 deles vão ter outra lista, e os outros 2, um será uma string e um será boleano
 
-  // fazer uma lista exibindo 5 pessoas com nome, idade, data de nascimento e nome da mae, e para 3 pessoas
-  // o nome do pai, porem quem nao tiver o pai nem exibe o titulo de pai
+  //  PRIMEIRA LISTA DO OBJETO
+  //  jogo1 objeto com 3 strings
+  //
+  //  SEGUNDA LISTA DO OBJETO
+  //  2 games com jogo1 boleano e jogo1 string
 
-  const pessoas = [
+  const games = [
     {
-      nome: "Roberto",
-      idade: 20,
-      dataNasc: "08/07/2002",
-      tel: "(11)99875-6271",
-      nomeMae: "Alexia",
+      videoGame: 'PS4',
+      novaGeracao: true,
+      jogosPopular: [
+        {
+          jogo1: 'God Of War',
+          jogo2: 'The Last Of Us',
+          jogo3: 'Assasins Creed'
+        }
+      ],
+      jogosVendidos: [
+        {
+          jogoOriginal: true,
+          vendas: '7 Milhões'
+        },
+        {
+          jogoOriginal: false,
+          vendas: '17 Bilhões'
+        }
+      ]
     },
     {
-      nome: "Alice",
-      idade: 32,
-      dataNasc: "01/02/1990",
-      tel: "(32)95482-3023",
-      nomeMae: "Amanda",
-      nomePai: "Matheus",
+      videoGame: 'SUPER NINTENDO',
+      novaGeracao: false,
+      jogosPopular: [{
+        jogo1: 'Super Mario',
+        jogo2: 'Tetris Atack',
+        jogo3: 'Mortal Kombat'
+      }],
+      jogosVendidos: [
+        {
+          jogoOriginal: true,
+          vendas: '600 Mil'
+        },
+        {
+          jogoOriginal: false,
+          vendas: '70 Milhões'
+        }
+      ]
     },
     {
-      nome: "Renata",
-      idade: 22,
-      dataNasc: "23/05/1999",
-      tel: "(23)99735-1099",
-      nomeMae: "Bianca",
-      nomePai: "João",
+      videoGame: 'XBOX 360',
+      novaGeracao: false,
+      jogosPopular: [{
+        jogo1: 'Halo',
+        jogo2: 'Skate 3',
+        jogo3: 'Gears Of War'
+      }],
+      jogosVendidos: [
+        {
+          jogoOriginal: true,
+          vendas: '20 Milhões'
+        },
+        {
+          jogoOriginal: false,
+          vendas: '100 Mil'
+        }
+      ]
     },
     {
-      nome: "Rafael",
-      idade: 25,
-      dataNasc: "23/05/1997",
-      tel: "(03)96489-0623",
-      nomeMae: "Natalia",
-      nomePai: "Guilherme",
+      videoGame: 'XBOX ONE',
+      novaGeracao: true,
+      jogosPopular: [{
+        jogo1: 'Assasins Creed',
+        jogo2: 'Forza Horizon',
+        jogo3: 'Ori'
+      }],
+      jogosVendidos: [
+        {
+          jogoOriginal: true,
+          vendas: '7 Bilhões'
+        },
+        {
+          jogoOriginal: false,
+          vendas: '1 Milhões'
+        }
+      ]
     },
-    {
-      nome: "Camila",
-      idade: 12,
-      dataNasc: "17/02/2010",
-      tel: "(11)99817-3304",
-      nomeMae: "Ana",
-    }
   ]
 
 
   return (
     <div className="App">
-      <div className='container'>
-        <div className='box'>
-          {pessoas.map(item => {
-            return (
-              <div>
-                <ul className='listagem'>
-                  <div>
-                    <li className='pessoa'><p>Nome:</p> {item.nome}</li>
-                    <li className='pessoa'><p>Idade:</p> {item.idade}</li>
-                    <li className='pessoa'><p>Data Nasc.:</p> {item.dataNasc}</li>
-                    <li className='pessoa'><p>Tel.:</p> {item.tel}</li>
-                    <li className='pessoa'><p>Nome Mãe:</p> {item.nomeMae}</li>
-                    {item.nomePai && <li className='pessoa'><p>Nome Pai:</p> {item.nomePai}</li>}
+      {
+        games.map((game, index) => {
+          return(
+          <div className='box' key={index}>
+            {game.videoGame}
+            {
+              game.jogosPopular.map(jogos => {
+                return(
+                  <div className='listagem'>
+                    Jogos Populares:
+                    <div className='pessoa'>{jogos.jogo1}</div>
+                    <div className='pessoa'>{jogos.jogo2}</div>
+                    <div className='pessoa'>{jogos.jogo3}</div>
                   </div>
-                  {item.nomePai ?
-                    <li className='titulo-pai'>TITULO DE PAI</li>
-                    :
-                    <li className='cade-pai'> :( </li>
-                  }
-                </ul>
-              </div>
-            )
-          })}
-        </div>
-      </div>
+                )
+              })
+            }
+            {
+              game.jogosVendidos.map(venda => {
+                return(
+                  <div className='listagem'>
+                    Vendas:
+                    {venda.vendas}
+                  </div>
+                )
+              })
+            }
+          </div>
+          )
+        })
+      }
     </div>
   );
 }
