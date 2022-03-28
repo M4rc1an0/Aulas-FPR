@@ -8,8 +8,8 @@ function App() {
   // fazer um click numa div com texto qualquer que retorne um alert com o texto "Você conseguil"
   // de uma variavel
   
-  let message = "Você conseguil"
-  let number = 4
+  const message = "Você conseguiu"
+  const number = 4
 
   return (
     <div className="App">
