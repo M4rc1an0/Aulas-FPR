@@ -1,0 +1,15 @@
+.container {
+    margin: 30px;
+    padding: 10px;
+    width: 100%;
+    border: solid 2px #7d2;
+}
+
+.container h2{
+    color: #7d2;
+}
+
+.container a {
+    color: rgb(70, 124, 25);
+    cursor: pointer;
+}
