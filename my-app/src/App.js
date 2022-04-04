@@ -1,27 +1,48 @@
 import './App.css';
 import Card from './components/Cards';
-import Link from './components/Link';
 
 function App() {
 
-  // fazer 4 cards que usem o mesmo componente, e que mostrem textos diferentes.
+  // fazer um mock de um objeto com 2 strings e 1 boleano e uma lista ,
+  // dentro da lista vamos ter 3 objetos com 2 strings e 1 boleano. (2 false e 1 true).
 
-  // mostrar 2 links que consome o mesmo componente que vai ser passado um boleano por props
-  // se eu passar 'true', exibe o link, se eu passar 'false' ou não passar nada, não exibe o link.
+  // criar 1 componente e rendenizar 3 vezes, com a resposta dos 3 objetos da lista sendo passado por props
+  // individualmente.
+
+  // quando o boleano false for passado, não exibe uma das strings.
+
+  const i = {
+    pessoa: 'Italo',
+    idade: '40',
+    temFilhos: true,
+    parente: [
+      {
+        nome: 'Jurelma',
+        par: 'Soares',
+        filhos: false
+      },
+      {
+        nome: 'Matheus',
+        par: 'Amanda',
+        filhos: false
+      },
+      {
+        nome: 'Alexandre',
+        par: 'Diana',
+        filhos: true
+      }
+    ]
+  }
+  // <Card text="1° Card" />
+
 
   return (
-    <>
       <div className="App">
-        <Card text="1° Card" />
-        <Card text="2° Card" />
-        <Card text="3° Card" />
-        <Card text="4° Card" />
+        {i.parente.map(item => {
+          return <Card nome={item.nome} par={item.par} filhos={item.filhos}/>
+        })
+        }
       </div>
-      <div className="App">
-        <Link render={true}/>
-        <Link render={true}/>
-      </div>
-    </>
   );
 }
 
