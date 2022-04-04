@@ -19,7 +19,7 @@ function App() {
       </div>
       <div className="App">
         <Link render={true}/>
-        <Link/>
+        <Link render={true}/>
       </div>
     </>
   );
