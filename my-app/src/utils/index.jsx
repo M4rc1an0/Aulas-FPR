@@ -1,5 +1,5 @@
 export const Console = (valor) => {
-    console.log(valor, 'é muito louco')
+    console.log(`${valor} é muito louco`)
 }
 
 const message = 'É U '
