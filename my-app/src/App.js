@@ -9,10 +9,13 @@ function App() {
   // Passar duas variaveis para uma segunda função aonde elas retornem dentro de um
   // alert depois do click
 
+  const message = 'É U '
+  const complement = 'GELINHO'
+
   return (
     <div className="App">
       <input onChange={(e) => { Console(e.target.value) }} />
-      <button onClick={() => { Click() }}>Enviar</button>
+      <button onClick={() => { Click(message, complement) }}>Enviar</button>
     </div>
   );
 }
