@@ -1,23 +1,23 @@
 import './App.css';
-import { Console, Click } from './utils';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Car from './pages/car';
+import Food from './pages/food';
+import Game from './pages/game';
+import Plant from './pages/plant';
+import Home from './home'
 
 function App() {
-
-  // Criar uma função externa, que chame o numero digitado
-  // no input no console.log, acrescentando a mensagem --é muito louco--
-
-  // Passar duas variaveis para uma segunda função aonde elas retornem dentro de um
-  // alert depois do click
-
-  const message = 'É U '
-  const complement = 'GELINHO'
-
   return (
-    <div className="App">
-      <input onChange={(e) => { Console(e.target.value) }} />
-      <button onClick={() => { Click(message, complement) }}>Enviar</button>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/Car' element={<Car />} />
+        <Route path='/Food' element={<Food />} />
+        <Route path='/Game' element={<Game />} />
+        <Route path='/Plant' element={<Plant />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
