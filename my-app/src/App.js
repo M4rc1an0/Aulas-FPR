@@ -1,18 +1,22 @@
 import './App.css';
-import { Console, Click } from './utils';
+import { ifElse, funcSwitch } from './utils';
 
 function App() {
 
-  // Criar uma função externa, que chame o numero digitado
-  // no input no console.log, acrescentando a mensagem --é muito louco--
+  // quero que você faça uma condição que se o valor digitado no input
+  // for --Guitarra-- console tem que aparecer 'tem cordas'
+  // se digitar --Bateria-- console aparece 'tem pedal, e se digitar
+  // --Microfone-- console aparece 'tem fios', se não 'não existe esse instrumento'
 
-  // Passar duas variaveis para uma segunda função aonde elas retornem dentro de um
-  // alert depois do click
+  // quero que você faça um console com switch case que faça algo com 3 opções e tenha
+  // uma opção para quando não atender as 3 opções.
 
   return (
     <div className="App">
-      <input onChange={(e) => { Console(e.target.value) }} />
-      <button onClick={() => { Click() }}>Enviar</button>
+      <h2>If e Else</h2>
+      <input onChange={(e) => {ifElse(e.target.value)}} />
+      <h2>Switch Case</h2>
+      <input onChange={(e) => {funcSwitch(e.target.value)}}/>
     </div>
   );
 }
