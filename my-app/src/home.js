@@ -4,40 +4,27 @@ function Home() {
   // camelCase
   // PascalCase
 
-  const shop = [
-    {
-      nome: 'CarSystem',
-      link: 'Car'
-    },
-    {
-      nome: 'Agricuture',
-      link: 'Plant'
-    },
-    {
-      nome: 'Games Gelin',
-      link: 'Game'
-    },
-    {
-      nome: 'Food Wait',
-      link: 'Food'
-    }
-  ]
+  let value
+  const typedRout = (route) => {
+    value = route
+  }
 
-  const redirect = (route) => {
-    return (window.location.href = route)
+  const redirect = () => {
+    return window.location.href = `/Shop?${value}`
   }
 
   return (
-    <>
-      {shop.map(shopping => {
-        return (
-          <div className="App">
-            <button onClick={() => {redirect(shopping.link)}}>{shopping.nome}</button>
-          </div>
-        )
-      })}
-    </>
-  );
+
+    <div className="App">
+      <input onChange={(e) => { typedRout(e.target.value) }} />
+      <button onClick={(e) => {
+        e.preventDefault()
+        redirect()
+      }}>
+        Redirecinar
+      </button>
+    </div>
+  )
 }
 
 export default Home;
