@@ -1,22 +1,30 @@
+import { useState } from 'react';
 import './App.css';
-import { ifElse, funcSwitch } from './utils';
 
 function App() {
+  const [verbo, setVerbo] = useState('ir')
+  const [local, setLocal] = useState('cinema')
+  const [acrescentar, setAcrescentar] = useState(1)
 
-  // quero que você faça uma condição que se o valor digitado no input
-  // for --Guitarra-- console tem que aparecer 'tem cordas'
-  // se digitar --Bateria-- console aparece 'tem pedal, e se digitar
-  // --Microfone-- console aparece 'tem fios', se não 'não existe esse instrumento'
+  function mudarRota() {
+    setVerbo('voltar')
+    setLocal('trabalho')
+  }
 
-  // quero que você faça um console com switch case que faça algo com 3 opções e tenha
-  // uma opção para quando não atender as 3 opções.
+  function multiplicar() {
+    setAcrescentar(acrescentar * 4)
+  }
 
   return (
-    <div className="App">
-      <h2>If e Else</h2>
-      <input onChange={(e) => {ifElse(e.target.value)}} />
-      <h2>Switch Case</h2>
-      <input onChange={(e) => {funcSwitch(e.target.value)}}/>
+    <div className="container">
+        <div className='box'>
+          <p>Vou {verbo} para o {local}.</p>
+          <button onClick={() => mudarRota()}>Trocar</button>
+        </div>
+        <div className='box'>
+          <p className='box'>{acrescentar}</p>
+          <button onClick={() => multiplicar()}>+</button>
+        </div>
     </div>
   );
 }
