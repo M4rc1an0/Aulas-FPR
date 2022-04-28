@@ -83,9 +83,8 @@ function App() {
       { nome: 'Gabriel' },
       { nome: 'Beatriz' },
       { nome: 'Patricia' },
-      { nome: 'Thomas' }
     ],
-    pessoasSubstitutas: [
+    pessoasG2: [
       { nome: 'Gabriela' },
       { nome: 'Alexandre' },
       { nome: 'Sofia' },
@@ -96,7 +95,18 @@ function App() {
       { nome: 'Stefany' },
       { nome: 'Kaique' },
       { nome: 'Raul' },
-      { nome: 'Larissa' }
+    ],
+    pessoasG3: [
+      { nome: 'Italo' },
+      { nome: 'Douglas' },
+      { nome: 'Nathan' },
+      { nome: 'Felipe' },
+      { nome: 'Emanuel' },
+      { nome: 'Poly' },
+      { nome: 'Marcelo' },
+      { nome: 'Mauricio' },
+      { nome: 'Rogério' },
+      { nome: 'Caio' },
     ]
   }
 
@@ -104,7 +114,7 @@ function App() {
   const [nomeClube, setNomeClube] = useState(brasil.clube)
   const [clube, setClube] = useState(brasil.elenco)
 
-  const [trocarNome, setTrocarNome] = useState(true)
+  const [trocarNome, setTrocarNome] = useState(0)
   const [pessoas, setPessoas] = useState(nomes.pessoas)
 
   useEffect(() => {
@@ -126,10 +136,14 @@ function App() {
   }, [trocar])
 
   useEffect(() => {
-    if(!trocarNome) {
-      setPessoas(nomes.pessoasSubstitutas)
-    } else {
+    if(trocarNome === 0) {
       setPessoas(nomes.pessoas)
+    } else if (trocarNome === 1){
+      setPessoas(nomes.pessoasG2)
+    } else if (trocarNome === 2) {
+      setPessoas(nomes.pessoasG3)
+    } else {
+      setTrocarNome(0)
     }
   }, [trocarNome])
   
@@ -148,7 +162,7 @@ function App() {
       </div>
 
       <div className='box'>
-        <button onClick={() => setTrocarNome(!trocarNome)}>Trocar Nomes</button>
+        <button onClick={() => setTrocarNome(trocarNome + 1)}>Trocar Nomes</button>
         {pessoas.map(nomes => (
           <p>{nomes.nome}</p>
         ))}
