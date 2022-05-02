@@ -2,171 +2,120 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-
-  const brasil = {
-    clube: 'Brasil',
-    elenco: [
-      { jogador: 'Gabriel Barbosa' },
-      { jogador: 'Daniel Alves' },
-      { jogador: 'Alex Sandro' },
-      { jogador: 'Richarlison' },
-      { jogador: 'Fabinho' },
-      { jogador: 'Raphinha' },
-      { jogador: 'Gabriel Menino' },
-      { jogador: 'Roberto Firmino' },
-      { jogador: 'Marquinhos' },
-      { jogador: 'Douglas Luiz' },
-      { jogador: 'Alisson Becker' }
-    ]
-  }
-
-  const saoPaulo = {
-    clube: 'São Paulo',
-    elenco: [
-      { jogador: 'Emiliano' },
-      { jogador: 'Igor Gomes' },
-      { jogador: 'Igor Vinicius' },
-      { jogador: 'Walce' },
-      { jogador: 'Lucas Lopes' },
-      { jogador: 'Jonathan Calleri' },
-      { jogador: 'Rafinha' },
-      { jogador: 'André Anderson' },
-      { jogador: 'Tiago Luís' },
-      { jogador: 'Gabriel Neves' },
-      { jogador: 'Nikão' }
-    ]
-  }
-
-  const corinthians = {
-    clube: 'Corinthians',
-    elenco: [
-      { jogador: 'Lucas Piton' },
-      { jogador: 'Gustavo Mosquito' },
-      { jogador: 'Fagner' },
-      { jogador: 'Renato Augusto' },
-      { jogador: 'Guilherme Vicentini' },
-      { jogador: 'Cassio Ramos' },
-      { jogador: 'Roger Guedes' },
-      { jogador: 'Robson Bambu' },
-      { jogador: 'Jô' },
-      { jogador: 'Raul Gustavo' },
-      { jogador: 'Paulinho' }
-    ]
-  }
-
-  const palmeiras = {
-    clube: 'Palmeiras',
-    elenco: [
-      { jogador: 'Gustavo Scarpa' },
-      { jogador: 'Gustavo Gomes' },
-      { jogador: 'Eduardo Pereira' },
-      { jogador: 'Raphael Cavalcante' },
-      { jogador: 'Maike' },
-      { jogador: 'Lucas de Freitas' },
-      { jogador: 'José Rafael' },
-      { jogador: 'Gabriel Veron' },
-      { jogador: 'Marcos Rocha' },
-      { jogador: 'Yago Santos' },
-      { jogador: 'Rony' }
-    ]
-  }
-
-  const nomes = {
-    pessoas: [
-      { nome: 'Alexia' },
-      { nome: 'Gustavo' },
-      { nome: 'Eduardo' },
-      { nome: 'Angela' },
-      { nome: 'Matheus' },
-      { nome: 'Lucas' },
-      { nome: 'Vanilda' },
-      { nome: 'Gabriel' },
-      { nome: 'Beatriz' },
-      { nome: 'Patricia' },
-    ],
-    pessoasG2: [
-      { nome: 'Gabriela' },
-      { nome: 'Alexandre' },
-      { nome: 'Sofia' },
-      { nome: 'João' },
-      { nome: 'Diogo' },
-      { nome: 'Juliana' },
-      { nome: 'Carol' },
-      { nome: 'Stefany' },
-      { nome: 'Kaique' },
-      { nome: 'Raul' },
-    ],
-    pessoasG3: [
-      { nome: 'Italo' },
-      { nome: 'Douglas' },
-      { nome: 'Nathan' },
-      { nome: 'Felipe' },
-      { nome: 'Emanuel' },
-      { nome: 'Poly' },
-      { nome: 'Marcelo' },
-      { nome: 'Mauricio' },
-      { nome: 'Rogério' },
-      { nome: 'Caio' },
-    ]
-  }
-
-  const [trocar, setTrocar] = useState(0)
-  const [nomeClube, setNomeClube] = useState(brasil.clube)
-  const [clube, setClube] = useState(brasil.elenco)
-
-  const [trocarNome, setTrocarNome] = useState(0)
-  const [pessoas, setPessoas] = useState(nomes.pessoas)
+  const [active, setActive] = useState(0) 
+  const [filme, setFilme] = useState('')
 
   useEffect(() => {
-
-    if (trocar === 1) {
-      setNomeClube(corinthians.clube)
-      setClube(corinthians.elenco)
+    if (active === 1) {
+      setFilme('Batman')
+    }
+    else if (active === 2) {
+      setFilme('Uncharted')
+    }
+    else if (active === 3) {
+      setFilme('Matrix')
+    } 
+    else if (active === 4 ) {
+      setFilme('John')
+    }
+    else if (active === 5) {
+      setFilme('Sonic')
     }
 
-    if (trocar === 2) {
-      setNomeClube(saoPaulo.clube)
-      setClube(saoPaulo.elenco)
-    }
+  }, [active])
 
-    if (trocar === 3) {
-      setNomeClube(palmeiras.clube)
-      setClube(palmeiras.elenco)
-    }
-  }, [trocar])
-
-  useEffect(() => {
-    if(trocarNome === 0) {
-      setPessoas(nomes.pessoas)
-    } else if (trocarNome === 1){
-      setPessoas(nomes.pessoasG2)
-    } else if (trocarNome === 2) {
-      setPessoas(nomes.pessoasG3)
-    } else {
-      setTrocarNome(0)
-    }
-  }, [trocarNome])
-  
   return (
     <div className="container">
-      <div className='box'>
-        <button onClick={() => setTrocar(1)}>Corinthians</button>
-        <button onClick={() => setTrocar(2)}>São Paulo</button>
-        <button onClick={() => setTrocar(3)}>Palmeiras</button>
+      <div className='containerImg'>
+        <img src='./Batman.jpg' onClick={() => { setActive(1) }} />
+        <img src='./uncharted.jpeg' onClick={() => { setActive(2) }} />
+        <img src='./matrix.jpg' onClick={() => { setActive(3) }} />
+        <img src='./john.jpg' onClick={() => { setActive(4) }} />
       </div>
-      <div className='box'>
-        <h1>{nomeClube}</h1>
-        {clube.map(jogadores => (
-          <p>{jogadores.jogador}</p>
-        ))}
-      </div>
-
-      <div className='box'>
-        <button onClick={() => setTrocarNome(trocarNome + 1)}>Trocar Nomes</button>
-        {pessoas.map(nomes => (
-          <p>{nomes.nome}</p>
-        ))}
-      </div>
+      {filme === 'Batman' &&
+        <div className='box'>
+          <div>
+            <p>Titulo: Batman</p>
+            <p>Descrição: Filmão de heroi monstro</p>
+            <p>Diretor: Matt Reeves</p>
+            <p>Genero: Ação</p>
+            <p>Personagens: Batman, Mulher Gato, Coringa, Pinguin, Charada</p>
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/eXsAkkPGHho"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen>
+            </iframe>
+            <div className='imgs'>
+              <img src='./batman1.jpg' />
+              <img src='./batman2.jpg' />
+            </div>
+          </div>
+        </div>
+      }
+      {filme === 'Uncharted' &&
+        <div className='box'>
+          <div>
+            <p>Titulo: Uncharted</p>
+            <p>Descrição: Filmão de Game</p>
+            <p>Diretor: Emanuel Medeiros</p>
+            <p>Genero: Ação</p>
+            <p>Personagens: Natan Drake, Jony, Angelica</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/v82etEmcf7o"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen>
+            </iframe>
+            <div className='imgs'>
+              <img src='./uncharted1.jpg' />
+              <img src='./uncharted2.jpg' />
+            </div>
+          </div>
+        </div>
+      }
+      {filme === 'Matrix' &&
+        <div className='box'>
+          <div>
+            <p>Titulo: Matrix</p>
+            <p>Descrição: Filmao de Ficção</p>
+            <p>Diretor: Kenuv Reeves</p>
+            <p>Genero: Ação</p>
+            <p>Personagens: Neo, Trinity, Morpheus</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wg7V2_OBXwQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" 
+            allowfullscreen></iframe>
+            <div className='imgs'>
+              <img src='./matrix1.jpg' />
+              <img src='./matrix2.jpeg' />
+            </div>
+          </div>
+        </div>
+      }
+      {filme === 'John' &&
+        <div className='box'>
+          <div>
+            <p>Titulo: John Wick</p>
+            <p>Descrição: Filmao de Morte a todo instante</p>
+            <p>Diretor: Kenuv Reeves</p>
+            <p>Genero: Ação</p>
+            <p>Personagens: John Wick, Willen, Matheus</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/C0BMx-qxsP4" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen>
+            </iframe>
+            <div className='imgs'>
+              <img src='./matrix1.jpg' />
+              <img src='./matrix2.jpeg' />
+            </div>
+          </div>
+        </div>
+      }
     </div>
   );
 }
