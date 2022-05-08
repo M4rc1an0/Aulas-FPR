@@ -1,62 +1,69 @@
 .container {
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-.box {
-  border: 1px solid #000;
-  background: rgba(238, 238, 238, 0.562);
-  padding: 20px;
-  display: flex;
   flex-direction: column;
 }
 
-.listagem {
-  border: 2px solid #000;
+.style-button button{
+  background: steelblue;
+  color: white;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width: 200px;
+  padding: 5px;
   margin: 5px;
-  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.boxImg img {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+.cor {
   display: flex;
   align-items: center;
-}
-
-.pessoa {
-  display: flex;
-  align-items: center;
-  border-left: 2px solid rgb(0, 0, 0);
-  list-style: none;
-  font-size: 15px;
-  margin: 5px 10px;
-  padding: 5px;
-}
-
-.pessoa p {
-  margin: 0;
+  width: 200px;
+  justify-content: center;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-  margin: 0 5px;
+  margin: 2px 0;
+  border: 2px solid black;
 }
 
-.div-pai {
-  border: 2px solid rgb(0, 0, 0);
-
+.pretoP {
+  color: black;
 }
 
-.titulo-pai {
-  border: 2px solid rgb(0, 0, 0);
-  list-style: none;
-  padding: 5px;
-  font-weight: bold;
+.vermelhoP {
+  color: red;
 }
 
-.cade-pai{
-  border: 2px solid rgb(255, 0, 0);
-  color:rgb(255, 0, 0);
-  list-style: none;
-  padding: 9px 10px;
-  font-weight: bold;
+.azulP {
+  color: blue;
 }
 
-.titulo {
-  border: 2px solid #000;
+.preto {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
+.vermelho {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.azul {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

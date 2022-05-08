@@ -1,18 +1,17 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Quarto from './quarto';
-import Banheiro from './banheiro';
-import Escritorio from './escritorio';
-import Sala from './sala';
+import Home from './home';
+import Split from './split';
+import QueryString from './queryString'
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/quarto' element={<Quarto />} />
-        <Route path='/banheiro' element={<Banheiro />} />
-        <Route path='/escritorio' element={<Escritorio />} />
-        <Route path='/sala' element={<Sala />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/split' element={<Split />} />
+        <Route path='/querystring' element={<QueryString />} />
       </Routes>
     </BrowserRouter>
   )
