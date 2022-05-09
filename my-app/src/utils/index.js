@@ -1,81 +1,110 @@
+import React, { useState } from "react"
+import { useEffect } from "react"
 
-export function splitUrl() {
+function SplitUrl() {
+    const [corBack, setCorBack] = useState()
 
+    
     const url = window.location.href
-
+    
     const exerSplit = url.split('&')
-    const app = exerSplit[0].split('app=')[1]
+    const loja = exerSplit[0].split('loja=')[1]
     const cor = exerSplit[1].split('cor=')[1]
-    const tipodeapp = exerSplit[2].split('tipodeapp=')[1]
+    const comodo = exerSplit[2].split('comodo=')[1]
+    const slogan = exerSplit[3].split('fornecedor=')[1]
+    console.log(slogan, 'slogan')
+    
+    const color = 
+        cor === 'azul' && 'blue' ||
+        cor === 'amarelo' && 'yellow' ||
+        cor === 'vermelho' && 'red' 
 
     const splitLoja = () => {
 
-        if (app === 'kanui') {
+        if (loja === 'riachuelo') {
             return (
-                <img src="./kanui.jpg" alt='kanui' />
+                <img src="./riacho.png" alt='riachuelo' />
             )
-        } else if (app === 'ifood') {
+        } else if (loja === 'americanas') {
             return (
-                <img src="./ifood.png" alt='ifood' />
+                <img src="./america.png" alt='americanas' />
             )
-        } else if (app === 'instagram') {
+        } else if (loja === 'magazineluiza') {
             return (
-                <img src="./instagram.jpg" alt='insta' />
+                <img src="./maga.png" alt='magazineluiza' />
             )
         } else {
-            console.log('= = = = Não existe esse app = = = =');
+
         }
     }
 
     const splitCor = () => {
 
-        if (cor === 'preto') {
-            return (
-                <div className='cor'><div className='preto' /><p className='pretoP'>PRETO</p></div>
-            )
+        if (cor === 'amarelo') {
+                setCorBack('yellow')
         } else if (cor === 'vermelho') {
-            return (
-                <div className='cor'><div className='vermelho' /><p className='vermelhoP'>VERMELHO</p></div>
-            )
+                setCorBack('red')
         } else if (cor === 'azul') {
-            return (
-                <div className='cor'><div className='azul' /><p className='azulP'>AZUL</p></div>
-            )
+                setCorBack('blue')
         } else {
-            console.log('= = = = Não existe essa cor = = = =');
+            alert('não existe essa cor')
         }
     }
+    useEffect(() => {
+        splitCor()
+        console.log(corBack, 'corBack')
+    }, [cor])
 
     const splitTipoLoja = () => {
 
-        if (tipodeapp === 'roupas') {
+        if (comodo === 'cozinha') {
             return (
-                <div className='cor'>ROUPAS</div>
+                <img src='https://finger.ind.br/wp-content/uploads/2020/07/home-5.png'/>
             )
-        } else if (tipodeapp === 'comida') {
+        } else if (comodo === 'sala') {
             return (
-                <div className='cor'>COMIDA</div>
+                <img src='https://www.liderinteriores.com.br/wp-content/uploads/2018/02/1-2-980x520.jpg'/>
             )
-        } else if (tipodeapp === 'social') {
+        } else if (comodo === 'quarto') {
             return (
-                <div className='cor'>SOCIAL</div>
+                <img src='https://casa.abril.com.br/wp-content/uploads/2021/12/Os-principais-8-erros-na-hora-de-compor-a-decorac%CC%A7a%CC%83o-dos-quartos-01-.jpeg?quality=95&strip=info&w=1024'/>
             )
         } else {
-            console.log('= = = = Não existe esse tipo = = = =');
+        }
+    }
+
+    const splitSlogan = () => {
+
+        if (slogan === 'madeira') {
+            return (
+                <div className='cor'>Madeira madeira - Madeira boa</div>
+            )
+        } else if (slogan === 'bonato') {
+            return (
+                <div className='cor'>Bonatto - Moveis bons ou ruim as vezes</div>
+            )
+        } else if (slogan === 'philco') {
+            return (
+                <div className='cor'>Philco - Tv com smart ruim</div>
+            )
+        } else {
         }
     }
 
     return (
-        <div>
+        <div style={{background: color, height: '100vh', width: '100%'}}>
+            <button onClick={() => window.location.href='/'}>Voltar</button>
             <div className='boxImg'>
                 {splitLoja()}
             </div>
-            <div className='title'>
-                {splitCor()}
-            </div>
-            <div>
+            <div className='boxImg'>
                 {splitTipoLoja()}
+            </div>
+            <div className='boxImg'>
+                {splitSlogan()}
             </div>
         </div>
     )
 }
+
+export default SplitUrl

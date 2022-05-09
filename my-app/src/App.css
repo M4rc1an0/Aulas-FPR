@@ -7,7 +7,7 @@
 }
 
 .style-button button{
-  background: steelblue;
+  background:olivedrab;
   color: white;
   font-weight: bold;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -19,51 +19,37 @@
   cursor: pointer;
 }
 
-.boxImg img {
-  border: 1px solid black;
+.style-buttonb button{
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.box {
+  margin: 30px 0;
+}
+
+.boxImg {
+  display: flex;
   width: 200px;
   height: 200px;
 }
 
-.cor {
-  display: flex;
-  align-items: center;
-  width: 200px;
-  justify-content: center;
-  font-weight: bold;
-  margin: 2px 0;
-  border: 2px solid black;
-}
-
-.pretoP {
-  color: black;
-}
-
-.vermelhoP {
-  color: red;
-}
-
-.azulP {
-  color: blue;
-}
-
-.preto {
-  background-color: black;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+.amarelo {
+  background-color: yellow;
 }
 
 .vermelho {
   background-color: red;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
 }
 
 .azul {
   background-color: blue;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
 }

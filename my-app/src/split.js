@@ -1,5 +1,5 @@
 import './App.css';
-import { splitUrl } from './utils/index'
+import splitUrl from './utils/index'
 
 function Split() {
 
