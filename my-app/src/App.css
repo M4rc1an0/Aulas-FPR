@@ -1,63 +1,42 @@
 .container {
   display: flex;
-  justify-content: center;
-}
-
-.box {
-  border: 1px solid #000;
-  background: rgba(238, 238, 238, 0.562);
-  padding: 20px;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
-.listagem {
+.box {
+  padding: 20px;
+  margin: 5px;
+  border: 1px solid #000;
+  background: rgba(238, 238, 238, 0.562);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box div {
+  text-align: center;
+  margin: 0 30px;
+}
+
+.box div h2 {
+  margin: 0 25px;
+}
+
+.cadastro {
   border: 2px solid #000;
   margin: 5px;
   padding: 10px;
+  flex-direction: column;
   display: flex;
   align-items: center;
 }
 
-.pessoa {
-  display: flex;
-  align-items: center;
-  border-left: 2px solid rgb(0, 0, 0);
-  list-style: none;
-  font-size: 15px;
-  margin: 5px 10px;
-  padding: 5px;
+.cadastro div {
+  margin: 5px;
 }
 
-.pessoa p {
-  margin: 0;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  margin: 0 5px;
-}
-
-.div-pai {
-  border: 2px solid rgb(0, 0, 0);
-
-}
-
-.titulo-pai {
-  border: 2px solid rgb(0, 0, 0);
-  list-style: none;
-  padding: 5px;
-  font-weight: bold;
-}
-
-.cade-pai{
-  border: 2px solid rgb(255, 0, 0);
-  color:rgb(255, 0, 0);
-  list-style: none;
-  padding: 9px 10px;
-  font-weight: bold;
-}
-
-.titulo {
-  border: 2px solid #000;
+.input {
+  width: 50px;
 }
 
