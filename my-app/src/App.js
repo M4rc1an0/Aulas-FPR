@@ -9,7 +9,6 @@ function App() {
     axios.get('https://projeto-aulas-fpr-default-rtdb.firebaseio.com/roupas.json')
       .then(function (response) {
         setResposta(response.data)
-        console.log(response.data);
       })
   }, [])
 
