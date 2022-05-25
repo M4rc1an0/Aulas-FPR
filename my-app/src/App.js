@@ -8,9 +8,7 @@ function App() {
   const [cor, setCor] = useState()
   const [tecido, setTecido] = useState()
   const [tipo, setTipo] = useState()
-  const [editarCor, setEditarCor] = useState()
-  const [editarTecido, setEditarTecido] = useState()
-  const [editarTipo, setEditarTipo] = useState()
+
 
   useEffect(() => {
     axios.get('https://projeto-aulas-fpr-default-rtdb.firebaseio.com/roupas.json')
@@ -25,7 +23,7 @@ function App() {
       tecido: tecido,
       cor: cor
     })
-      .then(function (response) {
+      .then(function () {
         alert("Seu item foi cadastrado!!!")
         setReactionar(!reacionar)
       }).catch(function () {
@@ -35,7 +33,7 @@ function App() {
 
   const excluir = (id) => {
     axios.delete(`https://projeto-aulas-fpr-default-rtdb.firebaseio.com/roupas/blusas/${id}.json`, {})
-      .then(function (response) {
+      .then(function () {
         alert("Seu item foi excluida!!!")
         setReactionar(!reacionar)
       }).catch(function () {
@@ -45,9 +43,9 @@ function App() {
 
   const editar = (id) => {
     axios.patch(`https://projeto-aulas-fpr-default-rtdb.firebaseio.com/roupas/blusas/${id}.json`, {
-      tipo: editarTipo,
-      tecido: editarTecido,
-      cor: editarCor
+      tipo: tipo,
+      tecido: tecido,
+      cor: cor
     })
       .then(function () {
         alert("Seu item foi editado!!!")
@@ -83,20 +81,20 @@ function App() {
               <div className='box'>
                 <div>
                   <p>{propriedades[1].tipo}</p>
-                  <input className='input' onChange={(e) => setEditarTipo(e.target.value)}/>
-                  <button onClick={() => editar(propriedades[0])}>Editar</button>
+                  <input className='input' onChange={(e) => setTipo(e.target.value)} />
                 </div>
                 <div>
                   <p>{propriedades[1].tecido}</p>
-                  <input className='input' onChange={(e) => setEditarTecido(e.target.value)}/>
-                  <button onClick={() => editar(propriedades[0])}>Editar</button>
-                  </div>
+                  <input className='input' onChange={(e) => setTecido(e.target.value)} />
+                </div>
                 <div>
                   <p>{propriedades[1].cor}</p>
-                  <input className='input' onChange={(e) => setEditarCor(e.target.value)}/>
+                  <input className='input' onChange={(e) => setCor(e.target.value)} />
+                </div>
+                <div>
+                  <button onClick={() => excluir(propriedades[0])}>Excluir</button>
                   <button onClick={() => editar(propriedades[0])}>Editar</button>
-                  </div>
-                <button onClick={() => excluir(propriedades[0])}>Excluir</button>
+                </div>
               </div>
             </div>
           )

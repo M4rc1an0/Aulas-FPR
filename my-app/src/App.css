@@ -15,12 +15,10 @@
 }
 
 .box div {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 0 30px;
-}
-
-.box div h2 {
-  margin: 0 25px;
 }
 
 .cadastro {
