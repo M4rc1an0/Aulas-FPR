@@ -1,18 +1,14 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Quarto from './quarto';
-import Banheiro from './banheiro';
-import Escritorio from './escritorio';
-import Sala from './sala';
+import Home from './Home';
+import Cadastro from './cadastro';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/quarto' element={<Quarto />} />
-        <Route path='/banheiro' element={<Banheiro />} />
-        <Route path='/escritorio' element={<Escritorio />} />
-        <Route path='/sala' element={<Sala />} />
+        <Route path='/' exact element={<Home />} />
+        <Route path='/cadastro' element={<Cadastro />} />
       </Routes>
     </BrowserRouter>
   )
