@@ -1,21 +1,21 @@
 import React, { useState } from "react"
 
 function Home() {
-  const [numberSession, setNumberSession] = useState()
+  const [login, setLogin] = useState()
+  const [senha, setSenha] = useState()
 
-  const redirectLocal = () => {
-    localStorage.setItem('nome', 'éuGelinho')
-  }
-
-  const redirectSession = () => {
-    sessionStorage.setItem('numero', numberSession)
+  const redirectLogin = () => {
+        localStorage.setItem('user', login)
+        localStorage.setItem('senha', senha)
+        window.location.href = '/local'
   }
 
   return (
     <>
-      <button><a onClick={() => redirectLocal()} href="/local">Redirecionar localStorage</a></button><br />
-      <input onChange={(e) => setNumberSession(e.target.value)}/>
-      <button><a onClick={() => redirectSession()} href="/session">Redirecionar sessionStorage</a></button>
+      Login: <input onChange={(e) => setLogin(e.target.value)} /><br />
+      Senha: <input onChange={(e) => setSenha(e.target.value)} /><br />
+      <button onClick={() => redirectLogin()}>Entrar</button>
+
     </>
   )
 }
